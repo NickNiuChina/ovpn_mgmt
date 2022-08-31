@@ -1,0 +1,24 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "ovpn/head.html" %}
+
+{# <body class="hold-transition sidebar-mini"> #}
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+  {# Navbar #}
+   {% include "ovpn/nav.html" %}
+
+  {# Main Sidebar Container #}
+  {% include "ovpn/sider.html" %}
+
+  {% block content %}{% endblock content %}
+
+  {# Main Footer #}
+  {% include "ovpn/footer.html" %}
+</div>
+
+</body>
+</html>
