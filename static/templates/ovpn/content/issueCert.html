@@ -5,6 +5,7 @@
 <h1 class="m-0">Update Req file </h1>
  <div class="col-md-6 mx-auto">
     <form method="post" action="issue/upload" enctype ="multipart/form-data">
+        {% csrf_token %}
         <div class="input-group">
             <div class="custom-file">
                 <input type="file" 

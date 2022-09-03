@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from ovpn import models
-# Forbidden (CSRF cookie not set.) ERROR
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 
@@ -15,7 +14,6 @@ def index(request):
 def clientStatus(request):
     return render(request, "ovpn/content/clientsStatus.html")
 
-# @csrf_exempt
 def clientStatusList(request):
     if request.method == "POST":
         start_note = int(request.POST.get('start', 0)) + 1
