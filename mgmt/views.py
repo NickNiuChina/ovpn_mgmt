@@ -9,4 +9,5 @@ def index(request):
     return redirect('/ovpn')
 
 def test(request):
-    return HttpResponse("HHHHH")
+    home = settings.BASE_DIR
+    return HttpResponse("Home:" + str(home))
