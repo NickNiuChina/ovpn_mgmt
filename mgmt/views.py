@@ -10,4 +10,4 @@ def index(request):
 
 def test(request):
     home = settings.BASE_DIR
-    return HttpResponse("Home:" + str(home))
+    return HttpResponse("Home: " + str(home))
