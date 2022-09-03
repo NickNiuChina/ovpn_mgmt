@@ -20,6 +20,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('ovpn/', include('ovpn.urls'))
+    path('ovpn/', include('ovpn.urls')),
+    path('test/', views.test),
 
 ]
