@@ -27,7 +27,7 @@ $(document).ready(function() {
         "ajax": {
             'url': "clientstatus/list",
             'type': 'POST',
-            'X-CSRFToken': csrftoken,
+            "headers": { 'X-CSRFToken': csrftoken },
             'data': {},
             'dataType': 'json',
         },

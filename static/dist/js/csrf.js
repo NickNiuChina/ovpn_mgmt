@@ -15,3 +15,20 @@ function getCookie(name) {
     return cookieValue;
 }
 var csrftoken = getCookie('csrftoken');
+
+/*
+ Fix below CSRF error:
+[20/Dec/2022 16:29:07] "GET /ovpn/clientstatus HTTP/1.1" 200 6306
+Forbidden (CSRF token missing.): /ovpn/clientstatus/list
+[20/Dec/2022 16:29:07] "POST /ovpn/clientstatus/list HTTP/1.1" 403 2506
+
+In the ajax field: add below headers:
+
+"ajax": {
+    'url': "clientstatus/list",
+    'type': 'POST',
+    "headers": { 'X-CSRFToken': csrftoken },
+    'data': {},
+    'dataType': 'json',
+},
+*/
