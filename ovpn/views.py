@@ -19,8 +19,8 @@ def clientStatusList(request):
         start_note = int(request.POST.get('start', 0)) + 1
         draw = int(request.POST.get('draw', 1))
         page_n = int(request.POST.get('length', 20)) #getting page number
-        filterlist = models.BossList.objects.values_list('storename','cn', 'ip','changedate', 'expiredate', 'status').order_by('-status', '-ip')[start_note: start_note+10]
-        count = models.BossList.objects.count()
+        filterlist = models.OvpnClients.objects.values_list('storename','cn', 'ip','changedate', 'expiredate', 'status').order_by('-status', '-ip')[start_note: start_note+10]
+        count = models.OvpnClients.objects.count()
         filterCount =  count if count < page_n else page_n
 
         context = {
