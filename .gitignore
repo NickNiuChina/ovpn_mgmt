@@ -1,6 +1,7 @@
 *.sqlite3
 *.sqlite
 *.db
+
 */__pycache__
 */migrations
 
@@ -91,8 +92,7 @@ celerybeat-schedule
 env/
 venv/
 ENV/
-env.bak/
-venv.bak/
+pyenv
 
 # Spyder project settings
 .spyderproject
@@ -104,8 +104,4 @@ venv.bak/
 # mkdocs documentation
 /site
 
-# mypy
-.mypy_cache/
-
-.DS_Store
 .idea
