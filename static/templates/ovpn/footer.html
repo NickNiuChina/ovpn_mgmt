@@ -5,5 +5,6 @@
       Service site only
     </div>
     {# Default to the left #}
-    <strong>Copyright &copy;{% now "Y" %} <a href="https://www.carel.com" target="_blank">CAREL INDUSTRIES S.p.A. </a>.</strong> All rights reserved.
+    {# if by context_processors {{ currentYear }} #}
+    <strong>Copyright &copy; {% now "Y" %} <a href="https://www.carel.com" target="_blank">CAREL INDUSTRIES S.p.A. </a>.</strong> All rights reserved.
   </footer>

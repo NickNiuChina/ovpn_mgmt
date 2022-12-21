@@ -65,7 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # Global variable, django will include this as source code! 直接在模板中使用标签处理
-                # 'mgmt.context_processor.globalVariable',
+                'mgmt.context_processor.globalVariable',
             ],
         },
     },

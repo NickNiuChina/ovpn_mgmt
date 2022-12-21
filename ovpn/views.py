@@ -32,6 +32,7 @@ def clientStatusList(request):
         print ("Draw ############: %s" %(draw) )
         print ("recordsTotal ############: %s" %(count) )
         print ("Debug ############: %s" %(list(filterlist)) )
+        print(request.__dir__())
         return JsonResponse(context)
 
 def issuecert(request):

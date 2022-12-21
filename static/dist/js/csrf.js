@@ -15,6 +15,8 @@ function getCookie(name) {
     return cookieValue;
 }
 var csrftoken = getCookie('csrftoken');
+console.log("csrftoken: " + csrftoken);
+console.log("cookie: " + document.cookie);
 
 /*
  Fix below CSRF error:
